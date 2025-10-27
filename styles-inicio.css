@@ -1,0 +1,699 @@
+/* ========================================
+   CSS ESPECÍFICO PARA LA PÁGINA DE INICIO - MEJORADO
+   Sistema Cablebús - Gobierno de Chiapas
+   ======================================== */
+
+/* ========================================
+   SECCIÓN HERO
+   ======================================== */
+.hero-section {
+    margin-bottom: var(--espaciado-3xl);
+}
+
+.hero-content {
+    background: linear-gradient(135deg, var(--color-turquesa-claro) 0%, var(--color-turquesa) 100%);
+    border-radius: var(--radio-xl);
+    padding: var(--espaciado-3xl);
+    margin-bottom: var(--espaciado-3xl);
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-3xl);
+    box-shadow: 0 8px 30px rgba(0, 161, 154, 0.3);
+    position: relative;
+    overflow: hidden;
+    animation: slideInDown 0.8s ease-out;
+}
+
+/* Efecto de onda en el hero */
+.hero-content::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -25%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 10s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        transform: translate(0, 0) scale(1);
+        opacity: 1;
+    }
+    50% { 
+        transform: translate(-30px, -30px) scale(1.1);
+        opacity: 0.8;
+    }
+}
+
+.hero-text {
+    flex: 1;
+    z-index: 2;
+}
+
+.hero-text h2 {
+    color: var(--color-blanco);
+    font-size: var(--texto-4xl);
+    margin-bottom: var(--espaciado-lg);
+    font-weight: 800;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.hero-description {
+    font-size: var(--texto-lg);
+    color: var(--color-blanco);
+    margin-bottom: var(--espaciado-xl);
+    line-height: 1.8;
+    opacity: 0.95;
+}
+
+.hero-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: var(--espaciado-xl);
+    margin-bottom: var(--espaciado-xl);
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--espaciado-lg);
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: var(--radio-md);
+    backdrop-filter: blur(10px);
+    transition: all var(--transicion-normal);
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-5px);
+}
+
+.stat-number {
+    display: block;
+    font-size: var(--texto-4xl);
+    font-weight: 800;
+    color: var(--color-blanco);
+    font-family: var(--fuente-principal);
+    margin-bottom: var(--espaciado-xs);
+}
+
+.stat-label {
+    font-size: var(--texto-sm);
+    color: var(--color-blanco);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.95;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--espaciado-md);
+    flex-wrap: wrap;
+}
+
+/* ========================================
+   IMAGEN HERO
+   ======================================== */
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    min-height: 450px;
+    z-index: 2;
+}
+
+.image-container {
+    position: relative;
+    width: 100%;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+.cablebus-photo {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    border-radius: var(--radio-xl);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+    transition: all var(--transicion-lenta);
+    object-fit: cover;
+    object-position: center;
+    opacity: 0;
+    animation: fadeInImage 1.2s ease-in-out 0.3s forwards;
+    border: 5px solid var(--color-blanco);
+}
+
+.cablebus-photo:hover {
+    transform: scale(1.03) rotate(1deg);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes fadeInImage {
+    from {
+        opacity: 0;
+        transform: translateY(30px) scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Badge de certificación en la imagen */
+.image-badge {
+    position: absolute;
+    bottom: -15px;
+    right: -15px;
+    background: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-magenta-oscuro) 100%);
+    color: var(--color-blanco);
+    padding: var(--espaciado-md) var(--espaciado-lg);
+    border-radius: var(--radio-md);
+    box-shadow: 0 8px 20px rgba(228, 0, 124, 0.4);
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+    font-weight: 600;
+    font-size: var(--texto-sm);
+    animation: slideInUp 0.8s ease-out 0.6s backwards;
+}
+
+.image-badge svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* ========================================
+   CARACTERÍSTICAS DEL PROYECTO
+   ======================================== */
+.features-section {
+    margin-bottom: var(--espaciado-3xl);
+}
+
+.features-section h3 {
+    color: var(--color-turquesa);
+    font-size: var(--texto-3xl);
+    text-align: center;
+    margin-bottom: var(--espaciado-2xl);
+    font-weight: 800;
+    position: relative;
+    padding-bottom: var(--espaciado-md);
+}
+
+.features-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-turquesa) 0%, var(--color-magenta) 100%);
+    border-radius: var(--radio-sm);
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--espaciado-xl);
+}
+
+.feature-card {
+    background: var(--color-blanco);
+    padding: var(--espaciado-2xl);
+    border-radius: var(--radio-lg);
+    text-align: center;
+    box-shadow: var(--sombra-md);
+    transition: all var(--transicion-normal);
+    border-top: 4px solid var(--color-turquesa);
+    border-bottom: 2px solid var(--color-magenta);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(0, 161, 154, 0.1), transparent);
+    transition: left var(--transicion-lenta);
+}
+
+.feature-card:hover::before {
+    left: 100%;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 161, 154, 0.25);
+    border-top-color: var(--color-magenta);
+}
+
+.feature-icon {
+    margin-bottom: var(--espaciado-lg);
+    display: flex;
+    justify-content: center;
+}
+
+.feature-card h4 {
+    color: var(--color-turquesa);
+    margin-bottom: var(--espaciado-md);
+    font-size: var(--texto-xl);
+    font-weight: 700;
+    font-family: var(--fuente-principal);
+}
+
+.feature-card p {
+    color: var(--color-gris-oscuro);
+    line-height: 1.7;
+}
+
+/* Colores alternos para las tarjetas */
+.feature-card:nth-child(2) {
+    border-top-color: var(--color-magenta);
+    border-bottom-color: var(--color-naranja);
+}
+
+.feature-card:nth-child(2) h4 {
+    color: var(--color-magenta);
+}
+
+.feature-card:nth-child(3) {
+    border-top-color: var(--color-naranja);
+    border-bottom-color: var(--color-morado);
+}
+
+.feature-card:nth-child(3) h4 {
+    color: var(--color-naranja);
+}
+
+.feature-card:nth-child(4) {
+    border-top-color: var(--color-morado);
+    border-bottom-color: var(--color-turquesa);
+}
+
+.feature-card:nth-child(4) h4 {
+    color: var(--color-morado);
+}
+
+/* ========================================
+   BENEFICIOS PARA LA CIUDADANÍA
+   ======================================== */
+.benefits-section {
+    margin-bottom: var(--espaciado-3xl);
+    background: linear-gradient(135deg, var(--color-gris-muy-claro) 0%, #e0e5e9 100%);
+    padding: var(--espaciado-3xl) var(--espaciado-2xl);
+    border-radius: var(--radio-xl);
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.benefits-section h3 {
+    color: var(--color-magenta);
+    font-size: var(--texto-3xl);
+    text-align: center;
+    margin-bottom: var(--espaciado-2xl);
+    font-weight: 800;
+    position: relative;
+    padding-bottom: var(--espaciado-md);
+}
+
+.benefits-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--color-magenta) 0%, var(--color-naranja) 100%);
+    border-radius: var(--radio-sm);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--espaciado-xl);
+}
+
+.benefit-item {
+    background: var(--color-blanco);
+    padding: var(--espaciado-xl);
+    border-radius: var(--radio-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espaciado-lg);
+    box-shadow: var(--sombra-md);
+    transition: all var(--transicion-normal);
+    border-left: 4px solid var(--color-magenta);
+    position: relative;
+    overflow: hidden;
+}
+
+.benefit-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 0;
+    background: var(--color-turquesa);
+    transition: height var(--transicion-normal);
+}
+
+.benefit-item:hover::before {
+    height: 100%;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px) translateX(5px);
+    box-shadow: 0 10px 25px rgba(0, 161, 154, 0.2);
+    border-left-color: var(--color-turquesa);
+}
+
+.benefit-icon {
+    font-size: 3rem;
+    color: var(--color-magenta);
+    flex-shrink: 0;
+    transition: transform var(--transicion-normal);
+}
+
+.benefit-item:hover .benefit-icon {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.benefit-content h4 {
+    color: var(--color-turquesa);
+    margin-bottom: var(--espaciado-sm);
+    font-size: var(--texto-xl);
+    font-weight: 700;
+    font-family: var(--fuente-principal);
+}
+
+.benefit-content p {
+    color: var(--color-gris-oscuro);
+    line-height: 1.7;
+}
+
+/* ========================================
+   LLAMADA A LA ACCIÓN
+   ======================================== */
+.cta-section {
+    background: linear-gradient(135deg, #C85A54 0%, #B94A44 100%);
+    color: var(--color-blanco);
+    padding: var(--espaciado-3xl) var(--espaciado-2xl);
+    border-radius: var(--radio-xl);
+    text-align: center;
+    margin-bottom: var(--espaciado-3xl);
+    box-shadow: 0 15px 40px rgba(200, 90, 84, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Efecto de fondo animado */
+.cta-background {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+}
+
+.cta-content h3 {
+    font-size: var(--texto-3xl);
+    margin-bottom: var(--espaciado-md);
+    font-weight: 800;
+    color: var(--color-blanco);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cta-content p {
+    font-size: var(--texto-lg);
+    margin-bottom: var(--espaciado-xl);
+    opacity: 0.95;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--color-blanco);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--espaciado-lg);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botones específicos para CTA */
+.btn-cta-primary,
+.btn-cta-secondary {
+    background: var(--color-blanco) !important;
+    color: #C85A54 !important;
+    border: 3px solid var(--color-blanco) !important;
+    font-weight: 700;
+    padding: var(--espaciado-md) var(--espaciado-2xl);
+    border-radius: var(--radio-md);
+    font-size: var(--texto-lg);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all var(--transicion-normal);
+}
+
+.btn-cta-primary:hover,
+.btn-cta-secondary:hover {
+    background: #F8F9FA !important;
+    border-color: #F8F9FA !important;
+    color: #B94A44 !important;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ========================================
+   ANIMACIONES ESCALONADAS
+   ======================================== */
+.feature-card,
+.benefit-item {
+    animation: fadeInUp 0.6s ease-out backwards;
+}
+
+.feature-card:nth-child(1) { animation-delay: 0.1s; }
+.feature-card:nth-child(2) { animation-delay: 0.2s; }
+.feature-card:nth-child(3) { animation-delay: 0.3s; }
+.feature-card:nth-child(4) { animation-delay: 0.4s; }
+
+.benefit-item:nth-child(1) { animation-delay: 0.1s; }
+.benefit-item:nth-child(2) { animation-delay: 0.2s; }
+.benefit-item:nth-child(3) { animation-delay: 0.3s; }
+.benefit-item:nth-child(4) { animation-delay: 0.4s; }
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Contador animado para estadísticas */
+@keyframes countUp {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.stat-number {
+    animation: countUp 1s ease-out;
+}
+
+/* ========================================
+   RESPONSIVE - PÁGINA DE INICIO
+   ======================================== */
+@media (max-width: 992px) {
+    .hero-content {
+        gap: var(--espaciado-xl);
+    }
+    
+    .hero-text h2 {
+        font-size: var(--texto-3xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+        gap: var(--espaciado-xl);
+        padding: var(--espaciado-xl);
+    }
+    
+    .hero-text h2 {
+        font-size: var(--texto-2xl);
+    }
+    
+    .hero-description {
+        font-size: var(--texto-base);
+    }
+    
+    .hero-stats {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: var(--espaciado-md);
+    }
+    
+    .stat-number {
+        font-size: var(--texto-3xl);
+    }
+    
+    .hero-actions {
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .hero-actions .btn {
+        flex: 1;
+        min-width: 200px;
+    }
+    
+    .hero-image {
+        min-height: 300px;
+        width: 100%;
+    }
+    
+    .cablebus-photo {
+        max-width: 100%;
+        border-radius: var(--radio-lg);
+        border-width: 3px;
+    }
+    
+    .image-badge {
+        bottom: -10px;
+        right: -10px;
+        padding: var(--espaciado-sm) var(--espaciado-md);
+        font-size: var(--texto-xs);
+    }
+    
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefit-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .benefits-section {
+        padding: var(--espaciado-xl) var(--espaciado-lg);
+    }
+    
+    .cta-section {
+        padding: var(--espaciado-xl) var(--espaciado-lg);
+    }
+    
+    .cta-content h3 {
+        font-size: var(--texto-2xl);
+    }
+    
+    .cta-content p {
+        font-size: var(--texto-base);
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-image {
+        min-height: 250px;
+    }
+    
+    .cablebus-photo {
+        border-radius: var(--radio-md);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        border-width: 2px;
+    }
+    
+    .hero-text h2 {
+        font-size: var(--texto-xl);
+    }
+    
+    .hero-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .features-section h3,
+    .benefits-section h3 {
+        font-size: var(--texto-2xl);
+    }
+    
+    .feature-card,
+    .benefit-item {
+        padding: var(--espaciado-lg);
+    }
+    
+    .cta-content h3 {
+        font-size: var(--texto-xl);
+    }
+    
+    .cta-content p {
+        font-size: var(--texto-sm);
+    }
+    
+    .btn-cta-primary,
+    .btn-cta-secondary {
+        padding: var(--espaciado-sm) var(--espaciado-lg);
+        font-size: var(--texto-base);
+    }
+}
+
+/* ========================================
+   MEJORAS DE RENDIMIENTO
+   ======================================== */
+/* Optimización para animaciones */
+.hero-content,
+.feature-card,
+.benefit-item {
+    will-change: transform;
+}
+
+/* Lazy loading para imágenes */
+.cablebus-photo {
+    content-visibility: auto;
+}
+
+/* ========================================
+   MODO OSCURO (opcional para futuro)
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+    /* Aquí se pueden agregar estilos para modo oscuro si se desea */
+}

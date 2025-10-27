@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Preguntas frecuentes sobre el Sistema Cablebús de Tuxtla Gutiérrez, Chiapas. Información oficial sobre el proyecto de movilidad urbana.">
+    <meta name="keywords" content="cablebús, preguntas frecuentes, FAQ, tuxtla gutiérrez, chiapas, transporte público">
+    <meta name="author" content="Gobierno de Chiapas - Secretaría de Movilidad y Transporte">
+    
+    <title>Preguntas Frecuentes - Sistema Cablebús | Secretaría de Movilidad y Transporte</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles-base.css">
+    <link rel="stylesheet" href="styles-preguntas.css">
+</head>
+<body>
+    <!-- Header gubernamental -->
+    <header class="gov-header" role="banner">
+        <div class="gov-header-content">
+            <div class="gov-logo" aria-label="Portal del Gobierno de Chiapas">
+                <svg class="gov-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M12 2L2 7v10c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-10-5z" fill="currentColor"/>
+                </svg>
+                <span>chiapas.gob.mx</span>
+            </div>
+            <nav class="gov-nav" aria-label="Navegación gubernamental">
+                <a href="https://smyt.chiapas.gob.mx/" target="_blank" rel="noopener">NUESTRO PORTAL</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Header principal -->
+    <header class="main-header">
+        <div class="header-content">
+            <div class="ministry-logos">
+                <img src="Logo.png" 
+                     alt="Logo del Gobierno de Chiapas" 
+                     class="logo-gobierno"
+                     height="85">
+            </div>
+            <div class="header-text">
+                <h1>Secretaría de Movilidad y Transporte</h1>
+                <p class="subtitle">Gobierno de Chiapas</p>
+                <p class="slogan">Humanismo que Transforma • 2024 - 2030</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Navegación secundaria -->
+    <nav class="secondary-nav" aria-label="Navegación principal">
+        <div class="secondary-nav-content">
+            <a href="index.html">Inicio</a>
+            <a href="preguntas.html" class="active" aria-current="page">Preguntas Frecuentes</a>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <main class="container">
+        <!-- Header de la página -->
+        <header class="page-header">
+            <h2>Centro de Información Ciudadana - Sistema Cablebús</h2>
+        </header>
+
+        <!-- Buscador -->
+        <section class="search-section" aria-labelledby="search-title">
+            <h3 id="search-title">🔍 Buscar Información</h3>
+            <div class="search-container">
+                <input type="search" 
+                       id="searchInput" 
+                       class="search-box" 
+                       placeholder="Buscar en preguntas frecuentes del Cablebús..."
+                       aria-label="Buscar preguntas frecuentes"
+                       autocomplete="off">
+                <button id="clearSearch" 
+                        class="clear-search" 
+                        aria-label="Limpiar búsqueda"
+                        type="button"
+                        style="display: none;">
+                    ×
+                </button>
+                <span class="search-icon" aria-hidden="true">🔍</span>
+                <div id="searchSuggestions" class="search-suggestions" role="listbox"></div>
+            </div>
+        </section>
+
+        <!-- Mensaje de no resultados -->
+        <div class="no-results" id="noResults" style="display: none;">
+            <h3>No se encontraron resultados</h3>
+            <p>Intenta con otros términos de búsqueda o explora las categorías de preguntas frecuentes.</p>
+        </div>
+
+        <!-- FAQ Container -->
+        <section class="faq-section" aria-labelledby="faq-title">
+            <h2 id="faq-title" class="sr-only">Preguntas Frecuentes</h2>
+            
+            <!-- ========================================
+                 FUNDAMENTO LEGAL Y CONSULTA CIUDADANA
+                 ======================================== -->
+            <article class="faq-category" data-category="fundamento">
+                <h3 class="category-title">
+                    <span class="category-icon" aria-hidden="true">⚖️</span>
+                    Fundamento Legal y Consulta Ciudadana
+                </h3>
+
+                <div class="faq-item" data-keywords="consulta ciudadana INE IEPC fundamento juridico">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué se realiza la consulta sin el INE o IEPC?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Porque el IEPC organiza únicamente procesos electorales y consultas de naturaleza electoral o constitucional.</p>
+                        <p><strong>Esta es una consulta social, informativa y de carácter participativo</strong>, organizada por el Gobierno del Estado y el Ayuntamiento, conforme al artículo 26 de la Constitución Federal, que establece la planeación democrática del desarrollo nacional, y a los principios de participación ciudadana previstos en la Ley de Planeación del Estado de Chiapas.</p>
+                        <p>Lo nuestro es un ejercicio administrativo y operativo de participación social, para decidir prioridades de inversión en la planeación de la ciudad, no una elección ni un plebiscito vinculante. Organizar una consulta vinculante tomaría al menos un año y sería mucho más compleja y costosa</p>
+                        <p>De cualquier forma, el Gobierno del Estado respetará la voluntad popular expresada por quienes participen.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="fundamento jurídico">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Cuál es el fundamento jurídico?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Ley que diga que tenemos que escuchar, norma que diga que tenemos que socializar, principio de que pueblo manda, etc.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="Por qué solo hay una semana de información por qué tan exprés">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué solo hay una semana de información por qué tan exprés?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Porque buscamos que el proceso sea focalizado, ágil y accesible, sin que se desgaste o politice.</p>
+                        <p><strong>Esta fase es informativa y exploratoria: si la ciudadanía dice que sí</strong>, habrá más etapas de socialización, participación y atención ciudadana.</p>
+                        <p>Una consulta breve permite que la conversación se concentre en la información esencial y en escuchar a quienes viven en la zona.</p>
+                        <p>Un proceso muy largo no sería un buen uso de los equipos que tenemos. El mismo personal atiende distintas zonas del estado y del municipio, así que buscamos hacerlo de manera ágil y eficiente, sin dejar de escuchar a la gente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="niños niñas votar participar consulta menores">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué pueden votar niñas y niños?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Porque la ciudad también les pertenece. Según el artículo 12 de la Ley General de los Derechos de Niñas, Niños y Adolescentes, tienen derecho a participar en las decisiones que afectan su entorno.</p>
+                        <p><strong>El Cablebús, como infraestructura pública, durará décadas;</strong> ellos y ellas serán quienes lo usen en el futuro. Su voz cuenta. Además, que una de sus primeras experiencias democráticas sea hablar y pensar la ciudad junto con sus familias y vecinos es algo positivo y formativo para su desarrollo ciudadano.</p>
+                        <p>Las niñas, niños y adolescentes podrán participar siempre acompañados de su madre, padre o tutor, quien deberá firmar un consentimiento informado para validar su participación, en cumplimiento con los principios de protección y participación segura establecidos por la ley.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="tan lejos de mi casa">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué tan lejos de mi casa?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El objetivo es que todas y todos puedan participar, sin importar la distancia. Las sedes se eligieron para estar a no más de 1 a 2 kilómetros de cada colonia convocada, priorizando accesibilidad, seguridad y servicios básicos como baños, electricidad y personal de atención ciudadana.</p>
+                        <p><strong>Durante la semana habrá seis espacios informativos y la votación será el domingo,</strong> abierta varias horas para facilitar la participación.</p>
+                        <p>Si necesitas ayuda para trasladarte, contacta a tu comité vecinal o al número de atención ciudadana "Tuxtla Resuelve" por WhatsApp o teléfono</p>
+                        <p>Y si prefieres que nos acerquemos a tu colonia, reúnan a 10 vecinos e iremos a la hora y lugar que indiquen para presentar el proyecto y resolver dudas. La votación, por logística y resguardo, se mantiene el domingo en las sedes oficiales.</p>
+                        <p>Las sedes oficiales son: DIF Granjas, Domo Parque Santa Cruz, Domo Parque Altos del Norte, Domo Salón Chiapas Solidario, CUID UNICACH Libramiento Norte, Parque Niño de Atocha (frente a biblioteca)</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="solo en esas colonias">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué solo en esas colonias?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Porque son las zonas donde los estudios técnicos y sociales muestran mayor demanda potencial y factibilidad constructiva para un sistema de teleférico.</p>
+                        <p>Consultar ahí permite recibir opiniones directamente de quienes serían los principales usuarios y cuyos entornos se verían transformados.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="Por qué a esa hora">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué a esa hora?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los horarios fueron definidos buscando los momentos donde <strong>más personas pueden asistir,</strong> con opciones de mañana y tarde.</p>
+                        <p>Habrá <strong>seis asambleas informativas,</strong> si no puedes ir a una, puedes acudir a otra.</p>
+                        <p>Las Asambleas informativas serán de 7pm a 8:30pm, En la UNICACH, habrá asamblea de 9 a 11am, y habrá votación de 2 a 4pm.</p>
+                        <p>La votación dura de 10 a 6pm para que tengas oportunidad durante el día, además será un evento familiar para que disfrutes con música, alimentos y bebidas.</p>
+                        <p>Además, si un grupo de vecinos quiere un horario o espacio distinto para la asamblea, podemos <strong>organizar una presentación especial</strong> para atenderlos directamente. La votación, por logística y resguardo, se mantiene el domingo en las sedes oficiales.</p>
+                        <p>Si prefieres que nos acerquemos a tu colonia, reúnan a 10 vecinos e iremos a la hora y lugar que indiquen para presentar el proyecto y resolver dudas. La votación, por logística y resguardo, se mantiene el domingo en las sedes oficiales</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="consulta ciudadana resultado no alternativas movilidad urbana">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si gana el "no"?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nada negativo. Este proyecto es uno de más de 20 que el Gobierno tiene en cartera para mejorar la movilidad urbana.</p>
+                        <p>Si la gente dice que no, se priorizarán otras alternativas —por ejemplo, otros corredores de transporte público, sistemas BRT o proyectos de calle completa—.</p>
+                        <p>Lo importante es dialogar sobre la ciudad que queremos construir juntos y priorizar la inversión donde más se necesite, escuchando a la gente.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="consulta ciudadana resultado sí licitación cablebús SINFRA">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si gana el "sí"?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La Secretaría de Infraestructura (SINFRA) iniciará la licitación en modalidad llave en mano, que incluye la elaboración del proyecto ejecutivo y todas las ingenierías, conforme a la Ley de Obras Públicas y Servicios Relacionados con las Mismas.</p>
+                        <p>Esa licitación definirá qué consorcio construirá el sistema y qué tecnología utilizará, entre las opciones disponibles —Leitner o Doppelmayr, u otra que cumpla con estándares internacionales de seguridad y eficiencia.</p>
+                        <p>Durante esta fase, los estudios técnicos determinarán el trazo más óptimo y las condiciones de obra, y el Gobierno del Estado y el Ayuntamiento realizarán los procesos de levantamiento de derechos de vía y diálogo con las personas propietarias de predios (no más de 30 en total, cifra baja comparada con proyectos terrestres).</p>
+                        <p>Solo entonces quedarán definidos con precisión los postes, trazos y estaciones, y se abrirá una nueva etapa de diálogo y socialización pública antes del inicio de la construcción.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="consulta ciudadana empate casillas resultado total tendencia general">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si pierde una casilla pero gana otra?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Se tomará en cuenta el resultado total de la consulta</strong>, sumando todos los votos emitidos.</p>
+                        <p>El objetivo no es dividir, sino conocer la tendencia general de la ciudadanía.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="no he visto plano trazo predios votación cablebús SINFRA">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué estoy votando si no he visto un plano?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Porque aún no existe un trazo definitivo aprobado</strong> por una de las empresas del mundo que saben hacer teleféricos.</p>
+                        <p>Hasta ahora se han realizado estudios de prefactibilidad como demanda de movilidad, necesidades de movilidad y económicas, no un proyecto ejecutivo de obra pública. Tenemos trazos preliminares y preselección de predios, pero ninguno definitivo.</p>
+                        <p>La consulta no es sobre un plano específico, sino sobre prioridades de inversión, si la ciudadanía considera prioritario esto y si quiere que el Gobierno continúe por ese camino.</p>
+                        <p>Si la gente vota que sí, la Secretaría de Infraestructura (SINFRA) elaborará el proyecto ejecutivo de obra, donde se definirán con precisión los postes, trazos, estaciones y predios, y toda la información será pública.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="qué hicieron estudios cablebús origen destino transporte demanda">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Pero entonces qué hicieron todo este tiempo?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Durante este año se realizaron estudios técnicos, sociales y económicos</strong> para validar que es una política pública de movilidad en la que vale la pena invertir, que construir un cablebús del norte al centro es viable y conveniente.</p>
+                        <p>Por ejemplo, estudios origen-destino, encuestas y cálculos de demanda, diagnóstico del transporte actual, entre otros.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="por qué ahora ciclo presupuestal inversión decisión ciudadana">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué ahora en el año y no antes y después?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Porque este es el momento del ciclo presupuestal</strong> en el que se define qué proyectos pueden avanzar al siguiente año.</p>
+                        <p>Ya contamos con los estudios necesarios para saber que es viable, pero antes de pasar a la etapa fuerte —la inversión, ingenierías y obras—, queremos confirmar si la ciudadanía realmente quiere que sigamos.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="lineamiento consulta participación social transparencia Constitución Chiapas">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Y dónde está publicado el lineamiento de esta consulta?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>No se requiere un lineamiento formal</strong>, porque no es una elección ni una consulta vinculante, sino un ejercicio de participación social de buena fe, respaldado por el artículo 26 de la Constitución Federal y la Ley de Planeación del Estado de Chiapas, que promueven la participación ciudadana en decisiones públicas. Son espacios de escucha ciudadana de buena fe, no de competencia política.</p>
+                        <p><strong>La transparencia está garantizada</strong>: la Secretaría de la Honestidad y Función Pública verificará la integridad del proceso, habrá presencia de medios de comunicación y observadores, y las sedes estarán resguardadas por la policía preventiva.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="sedes votación colonia vecinos accesibilidad UNICACH">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Solo en esas sedes?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Las <strong>sedes oficiales de votación se definieron por razones de logística, seguridad y resguardo del proceso</strong>.</p>
+                        <p>Pero si te juntas con al menos 10 vecinos, iremos a tu colonia a presentar el proyecto, resolver dudas y escuchar comentarios, en el lugar y hora que acuerden.</p>
+                        <p>La <strong>votación, por logística y resguardo</strong>, se mantiene en la UNICACH Libramiento Norte el viernes, y el domingo 26 en las sedes oficiales.</p>
+                        <p>Si tú o alguien de tu familia requiere apoyo por discapacidad o movilidad limitada, comunícalo aquí: el equipo brindará <strong>acompañamiento personalizado conforme al principio de accesibilidad universal</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="identificación participación documento INE escolar vecinal mayores de 12 años">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué se acepta cualquier tipo de identificación entonces?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Porque buscamos reducir las barreras de participación. No se trata de una elección de representantes populares, sino de un ejercicio ciudadano abierto, por lo que puedes participar con cualquier identificación vigente: credencial del INE, escolar, laboral, acta de nacimiento, licencia, pasaporte, credencial universitaria o constancia vecinal.</p>
+                        <p><strong>El objetivo es que todas las personas mayores de 12 años puedan participar, sin importar su condición o tipo de documento.</strong></p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ========================================
+                 SEGURIDAD Y PROTECCIÓN
+                 ======================================== -->
+            <article class="faq-category" data-category="seguridad">
+                <h3 class="category-title">
+                    <span class="category-icon" aria-hidden="true">🛡️</span>
+                    Seguridad y Protección
+                </h3>
+
+                <div class="faq-item" data-keywords="lluvia clima tormenta eléctrica viento cablebús seguridad">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si llueve?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Nada. El sistema está diseñado para funcionar bajo lluvia</strong>. Se monitorea todo el tiempo y cuenta con energía propia.</p>
+                        <p>Solo se detiene unos segundos si hay tormenta eléctrica o viento fuerte, y en cuanto pasa, continúa el servicio con total normalidad y seguridad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="temblor sismo cablebús protección civil seguridad estaciones motor auxiliar">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si tiembla?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Es muy raro que se detenga el sistema; solo ocurre durante algunos segundos en vientos muy fuertes o lluvias intensas. En casos excepcionales que tomen un par de minutos, <strong>el motor auxiliar mueve las cabinas hasta la estación más cercana</strong>.</p>
+                        <p><strong>Cada estación cuenta con personal y equipo de Protección Civil capacitado</strong> y con herramientas especializadas para acceder a cualquier parte del sistema y atender cualquier eventualidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="atorado puerta sensores seguridad embarque transporte terrestre">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si me atoro en la puerta?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Nada, no estás en riesgo</strong>. Las puertas tienen sensores que detectan cualquier obstrucción. Si algo las bloquea, se reabren automáticamente y la cabina no sale hasta que esté todo despejado.</p>
+                        <p>Como el sistema se mueve a velocidad constante y moderada, es fácil pausarlo y reanudarlo en cualquier momento.</p>
+                        <p><strong>Durante el embarque, el anclaje tiene 3 sensores de seguridad</strong> que garantizan que nadie quede atrapado. La tasa de ocurrencia es de menos del 0.01 %, muy por debajo de la que se presenta en sistemas de transporte terrestre. Además, siempre hay personal en cada plataforma para atender a cualquier persona.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="alturas seguridad cablebús cimentación cabinas mecánica de suelos">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Las alturas no son peligrosas?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Las alturas promedio van de 18 a 22 metros, con algunos puntos de hasta 35 metros en zonas altas. Aunque parezca alto, <strong>el movimiento es estable y las cabinas están completamente cerradas</strong>. No hay riesgo en ningún tramo.</p>
+                        <p><strong>Cada torre tiene cimentaciones verificadas por estudios de mecánica de suelos</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="luz electricidad corte energía plantas eléctricas respaldo cablebús">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si se va la luz?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>El sistema tiene plantas eléctricas que entran en automático</strong> si hay un corte de energía. La operación nunca depende de una sola fuente de electricidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="caída seguridad cablebús pinzas acero certificación peso teleférico">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Se puede caer?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. Las cabinas van sujetas al cable mediante <strong>pinzas de acero certificadas internacionalmente</strong> que se bloquean mientras están en movimiento.</p>
+                        <p>Cada pinza puede soportar <strong>hasta 5 veces el peso total de una cabina llena</strong>.</p>
+                        <p>En más de veinte años de operación urbana en Latinoamérica, no se ha registrado una sola caída de cabina. <strong>No hay registros de caída de cabinas en teleféricos urbanos europeos</strong> hasta la fecha.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="rayo tormenta eléctrica pararrayos descarga a tierra seguridad cablebús">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si le cae un rayo?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Nada. Las torres y estaciones cuentan con <strong>pararrayos y sistemas de descarga a tierra</strong>.</p>
+                        <p>Si un rayo impacta, la corriente se desvía al suelo sin afectar las cabinas ni los usuarios, el sistema se detiene brevemente, se revisa el tramo afectado y se reactiva manualmente cuando se confirma que todo está en orden.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="persona agresiva seguridad vigilancia cámaras interfon estaciones torniquete">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si me toca una persona agresiva adentro?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Todas las cabinas tienen <strong>cámaras e interfon</strong> conectado directamente al centro de control.</p>
+                        <p>El sistema de vigilancia detecta cualquier comportamiento potencialmente violento o inseguro, el personal de seguridad interviene desde la siguiente estación. El recorrido promedio dura pocos minutos, y hay vigilancia constante en video y audio.</p>
+                        <p>Además, para entrar a la estación todas las personas pasan por un torniquete y siempre hay personal de seguridad evaluando.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="cable ruptura acero galvanizado inspección electromagnética tensión temperatura seguridad">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Cómo sabemos que no se va a romper el cable?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Los cables son de <strong>acero galvanizado trenzado de alta resistencia</strong>. Se inspeccionan a diario <strong>con equipos electromagnéticos</strong> que detectan cualquier microfractura interna.</p>
+                        <p>Además, se reemplazan de forma preventiva antes de cumplir su vida útil. Personal de ingeniería monitorea en tiempo real la tensión y temperatura del cable durante toda la operación.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="puerta abierta seguridad bloqueo electrónico sensores cablebús estaciones">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si se abre la puerta a mitad del viaje?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No puede suceder. Las puertas están <strong>bloqueadas electrónicamente</strong> durante todo el recorrido y solo se desbloquean dentro de las estaciones.</p>
+                        <p>Si una puerta no cierra correctamente, la cabina no puede salir. Hay sensores redundantes que detienen el sistema ante cualquier anomalía.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="cinturón de seguridad cabina estable diseño accesible niñas mayores discapacidad">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Tiene cinturón de seguridad?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>No lo necesita</strong>. El movimiento es continuo y estable, sin giros ni frenadas. Las cabinas tienen piso firme, asientos y barras para apoyarse cómodamente.</p>
+                        <p>Todo el diseño está pensado para que el viaje sea seguro para niñas, personas mayores y personas con discapacidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="choque cabinas distancia sensores tracción sincronización velocidad cablebús">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Pueden chocar las cabinas?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. El sistema mantiene <strong>distancia constante entre cabinas</strong>, controlada por el sistema de tracción y sensores electrónicos.</p>
+                        <p>Si hay cualquier variación, reduce la velocidad o se detiene. Cada cabina viaja de forma sincronizada y a la misma velocidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="detención cablebús mitad recorrido motor auxiliar protección civil seguridad">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si se detiene a la mitad, arriba? ¿Cómo me bajan?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Es muy raro que se detenga el sistema; solo ocurre durante algunos segundos en vientos muy fuertes o lluvias intensas. En casos excepcionales que tomen un par de minutos, <strong>el motor auxiliar mueve las cabinas hasta la estación más cercana</strong>.</p>
+                        <p><strong>Cada estación cuenta con personal y equipo de Protección Civil capacitado</strong> y con herramientas especializadas para acceder a cualquier parte del sistema y atender cualquier eventualidad.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="cámaras vigilancia centro de control monitoreo seguridad protección civil">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Tienen cámaras?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Sí. Cada cabina y estación <strong>tiene cámaras conectadas al centro de control</strong>, donde personal especializado monitorea en tiempo real las 24 horas.</p>
+                        <p>Cualquier situación se detecta y atiende de inmediato, en coordinación con Protección Civil y seguridad pública.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="mareo movimiento balanceo visibilidad primeros auxilios atención médica">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Te mareas?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Es muy poco común. El movimiento es <strong>constante, sin balanceos ni giros</strong>. Las cabinas están ventiladas y ofrecen buena visibilidad.</p>
+                        <p>Si alguien es sensible al movimiento, basta con mirar al horizonte o permanecer sentado durante el viaje.</p>
+                        <p>En caso de mareo o malestar por cualquier causa, cada estación cuenta <strong>con personal capacitado en primeros auxilios y equipo básico de atención médica</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="miedo alturas confianza cabinas demostrativas cultura transporte colectivo orientación">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Y si la gente no lo usa porque le da miedo?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Es normal que algunas personas puedan sentir miedo a las alturas al principio, pero el miedo desaparece en cuanto se prueba y se habitúan. El viaje es suave, silencioso y muy estable. En todas las ciudades donde hay teleférico, más del 90 % de las personas lo siguen usando después de su primer recorrido.</p>
+                        <p>Si la ciudadanía vota que sí, instalaremos <strong>una o dos cabinas demostrativas</strong> para que las personas las conozcan y experimenten, y haremos alianzas con espacios educativos y culturales para tener <strong>un programa integral de cultura del transporte colectivo</strong>. Además, habrá personal acompañando los primeros viajes para orientar y resolver cualquier duda.</p>
+                        <p>Lo más común es que este tipo de transportes generen curiosidad y despierten entusiasmo.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="miedo alturas seguridad cabina cerrada asistencia vista">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">Me dan miedo las alturas ¿Qué hago?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>Este es uno de los sistemas de transporte más seguros del mundo</strong>. Las cabinas están completamente cerradas, con movimiento estable y sin balanceos.</p>
+                        <p>Si alguien es sensible a las alturas, puede <strong>sentarse mirando al frente o concentrarse en el interior de la cabina</strong>.</p>
+                        <p><strong>El recorrido es corto y siempre hay personal que puede asistirte</strong>. Con el tiempo, la mayoría de las personas pierde el miedo y disfruta la vista.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="automático monitoreo ingenieros centro de control supervisión humana tiempo real cable energía clima">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Si nadie lo maneja, cómo funciona la máquina?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p><strong>El sistema es automático, pero no está solo</strong>. Ingenieras e ingenieros monitorean todo el tiempo la velocidad, tensión del cable, energía y condiciones del clima desde el centro de control.</p>
+                        <p><strong>Todo funciona con supervisión humana y datos en tiempo real</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="aves protección ambiental marcadores de vuelo colisiones monitoreo Tuxtla">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa con las aves?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Tuxtla es ciudad de las Aves, y eso se respetará. El diseño incluye marcadores de vuelo en los cables (discos o espirales visibles que las aves detectan fácilmente) y dispositivos disuasivos en cualquier ventana o superficie reflejante de las estaciones.</p>
+                        <p>La velocidad moderada de las cabinas y la constancia rutinaria del flujo hacen que las aves esquiven fácilmente o se habituen. Además los cables no ocupan mucho espacio.</p>
+                        <p>En caso de que la ciudadanía vote que sí, se buscará <strong>colaborar con la mesa interinstitucional que ya monitorea aves en el aeropuerto</strong>, así como con <strong>especialistas locales</strong>, para crear un <strong>protocolo de monitoreo y respuesta ambiental</strong>.</p>
+                        <p>En sistemas que aplican estas medidas, la <strong>incidencia de colisiones es prácticamente nula</strong>.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ========================================
+                 GRADO DE AVANCE DEL PROYECTO
+                 ======================================== -->
+            <article class="faq-category" data-category="proyecto">
+                <h3 class="category-title">
+                    <span class="category-icon" aria-hidden="true">🏗️</span>
+                    Grado de avance del proyecto y transparencia
+                </h3>
+
+                <div class="faq-item" data-keywords="estaciones trazo preliminar ingeniería vecinos dependencias planeación">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Dónde serían las estaciones y por qué no muestran el trazo?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Aún no hay un trazo final. Existen rutas y predios <strong>preliminares</strong>, pero darlos como definitivos sería irresponsable y generaría confusión.</p>
+                        <p>El trazo definitivo depende de la <strong>ingeniería de detalle y gestiones con vecinos y dependencias</strong>. Cuando esté validado, se presentará públicamente antes de iniciar la obra.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="rutas combis transporte concesionarios diálogo optimización operadores servicio sostenible">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa con las rutas y combis que pasan por ahí? ¿Ya hablaron con ellas?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Si la ciudadanía aprueba el proyecto, abriremos un <strong>diálogo permanente con los concesionarios</strong> y personas conductoras de la zona.</p>
+                        <p>La meta es <strong>ordenar y optimizar</strong> las rutas, garantizando que el usuario tenga mejor servicio y que los operadores mantengan su sustento dentro de un sistema más eficiente y sostenible.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="concesión operación gobierno estatal gestión organismos internacionales descentralizado mantenimiento sostenible">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Está concesionado? ¿Quién lo va a operar?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. El proyecto es <strong>público</strong> y será operado por el <strong>Gobierno del Estado</strong>.</p>
+                        <p>Estamos evaluando <strong>modelos de gestión de manera profesional con organismos internacionales</strong> como Naciones Unidas, y todo apunta a la creación de un <strong>organismo público descentralizado</strong>.</p>
+                        <p>Faltan más de dos años para esa etapa; los primeros estarán dedicados a las ingenierías, <strong>construcción y transferencia tecnológica para un mantenimiento sostenible a largo plazo</strong>.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ========================================
+                 IMPLICACIONES DE LAS OBRAS
+                 ======================================== -->
+            <article class="faq-category" data-category="obras">
+                <h3 class="category-title">
+                    <span class="category-icon" aria-hidden="true">🚧</span>
+                    Implicaciones de las obras
+                </h3>
+
+                <div class="faq-item" data-keywords="predios estación afectación vivienda reubicación calidad de vida legal obras">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si la estación cae en mi predio?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cuando se definen los predios, inicia un <strong>diálogo directo con cada familia</strong>. Si una estación o torre afecta un terreno habitado, se ofrecen <strong>alternativas seguras y legales</strong>: apoyo para <strong>mejorar la vivienda existente o reubicación en la misma zona con mejores condiciones</strong>.</p>
+                        <p>Todo conforme a la ley y buscando <strong>mejorar la calidad de vida de las personas</strong>, no afectarla. De cualquier forma, comparado con otro tipo de obras, el impacto en el suelo es menor.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="rentas valor casas desplazamiento gentrificación estaciones predios familias locales actividad económica">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasará con las rentas y el valor de las casas? (Desplazamiento y gentrificación)</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cerca de las estaciones suele aumentar el valor del suelo, lo cual <strong>permite más recaudación municipal</strong> y mejora el entorno.</p>
+                        <p>Al mismo tiempo, el gobierno cuidará que <strong>no haya especulación ni desplazamiento</strong>. Por eso <strong>no se publican predios preliminares</strong> hasta tener trazos definitivos.</p>
+                        <p>El proyecto está pensado para <strong>beneficiar a las familias locales</strong>, no para sustituirlas: habrá más actividad económica, pequeños negocios y oportunidades sin gentrificación.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="árboles tala impacto ambiental trasplante espacios verdes estaciones">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Van a talar árboles?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El teleférico tiene <strong>bajo impacto en suelo</strong>. Se estima que, comparado con otras obras viales, el impacto sería <strong>seis veces menor</strong> (alrededor de 80 árboles).</p>
+                        <p>Si la gente aprueba el proyecto, se hará un <strong>inventario árbol por árbol</strong>: los valiosos se protegerán o <strong>trasplantarán con técnica especializada</strong>, y se sustituirán especies invasoras o enfermas.</p>
+                        <p>Considerando que la obra implica crear nuevos espacios públicos en torno a las estaciones, y las calles de acceso caminables y arboladas, el saldo neto será <strong>positivo</strong>, con más <strong>árboles nativos y espacios verdes</strong> en torno a las estaciones.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ========================================
+                 COSTOS Y FINANCIAMIENTO
+                 ======================================== -->
+            <article class="faq-category" data-category="financiamiento">
+                <h3 class="category-title">
+                    <span class="category-icon" aria-hidden="true">📊</span>
+                    Costos, gasto público y sostenibilidad financiera y operativa
+                </h3>
+
+                <div class="faq-item" data-keywords="costo inversión mantenimiento rentabilidad kilómetro licitación modelo operativo">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Cuánto cuesta?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La obra completa está preliminarmente estimada en 3,450 millones de pesos, incluyendo el sistema electromecánico, las estaciones y el derecho de vía.</p>
+                        <p>El mantenimiento anual sería de 121 millones, y los beneficios superan los costos por más de 800 millones de pesos. Equivale a <strong>unos 400 millones por kilómetro, lo que la hace mucho más económica que un metro subterráneo o un tranvía</strong>.</p>
+                        <p>Se trata de un cálculo paramétrico, es decir, una estimación técnica sujeta a ajustes según la competencia en licitación, los precios de mercado y las decisiones finales sobre el modelo operativo.</p>
+                        <p>Por cada peso invertido, el proyecto genera una rentabilidad social del 12% anual, y más de 150 mil personas vivirían a menos de 15 minutos caminando de una estación.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="Conejobús gobernanza eléctrica subsidio organismo descentralizado transparencia continuidad mantenimiento">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Cómo evitar que sea un "Conejobús 2.0"?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El Conejobús fracasó por una gobernanza fragmentada (127 socios), corrupción en el uso de combustible, falta de regulación clara, y la ausencia de un subsidio estatal sostenible, agravado por la pandemia.</p>
+                        <p><strong>El nuevo sistema sería eléctrico, público y bajo supervisión estatal</strong>, con acompañamiento técnico de la UNOPS y de la Agencia Federal de Transporte.</p>
+                        <p><strong>Se evalúa su operación mediante un organismo público descentralizado</strong>, lo que permite autonomía técnica, control financiero, transparencia en la gestión y continuidad más allá de los cambios de gobierno.</p>
+                        <p><strong>Hoy existe un marco legal y técnico moderno que garantiza mantenimiento, eficiencia y servicio continuo para la ciudadanía</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="continuidad administración contratos multianuales patrimonio estatal mantenimiento organismos internacionales">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Qué pasa si la siguiente administración no quiere seguirlo? ¿Cómo se garantiza la continuidad y mantenimiento?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El proyecto se estructurará con <strong>contratos multianuales, presupuesto garantizado y soporte de organismos internacionales</strong>, lo que asegura su continuidad más allá de cambios políticos.</p>
+                        <p>Además, al ser <strong>infraestructura pública registrada como patrimonio estatal</strong>, ninguna administración puede abandonarla sin consecuencias legales o financieras.</p>
+                    </div>
+                </div>
+            </article>
+
+            <!-- ========================================
+                 ALTERNATIVAS DE MOVILIDAD
+                 ======================================== -->
+            <article class="faq-category" data-category="alternativas">
+                <h3 class="category-title">
+                    <span class="category-icon" aria-hidden="true">🚌</span>
+                    Alternativas de movilidad y acciones adicionales al Cablebús
+                </h3>
+
+                <div class="faq-item" data-keywords="costo cablebús inversión movilidad presupuesto transporte público beneficio social">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿No es mucho dinero para una sola obra?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>El costo del Cablebús se justifica porque <strong>resuelve un problema metropolitano</strong>, conectando <strong>a más de 150 mil personas</strong> con escuelas, empleos y servicios.</p>
+                        <p>Su <strong>relación costo-beneficio (+19%)</strong> es mayor que la de muchas obras viales y genera beneficios sociales, ambientales y económicos de largo plazo.</p>
+                        <p>Además, con un costo estimado de <strong>400 millones por kilómetro</strong>, es <strong>mucho más barato que un metro subterráneo</strong>.</p>
+                        <p>Invertir en transporte público es una <strong>deuda histórica</strong>. En el sexenio pasado, <strong>97% del presupuesto de movilidad se destinó a autos particulares</strong>, dejando fuera a quienes más lo necesita. Solo el puente de Caña Hueca o Joyyo Mayu —que no se construyó— <strong>hubiera costado lo equivalente a 22 años de mantenimiento del Cablebús</strong>.</p>
+                        <p>El transporte público moderno cuesta, pero invertir en movilidad para el pueblo <strong>vale cada peso</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item" data-keywords="BRT tren ligero cablebús topografía Tuxtla red metropolitana movilidad sostenible BID">
+                    <button class="faq-question" aria-expanded="false">
+                        <span class="faq-question-text">¿Por qué no mejor ponen un BRT o un tren ligero?</span>
+                        <span class="faq-toggle" aria-hidden="true">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Cada modo de transporte tiene su función. En este caso, el teleférico es la opción más viable por la topografía de Tuxtla, su menor costo por kilómetro y su bajo impacto en el suelo.</p>
+                        <p>Además, no sustituye al transporte terrestre, sino que lo complementa dentro de una red metropolitana más eficiente. Un cablebús es más fácil y rápido de construir que un BRT, que implica liberaciones de derecho de vía más complejas y costosas, además de mayor afectaciones durante obra.</p>
+                        <p>La Etapa 2 consiste en conectar el cablebús con un eje metropolitano, en un sistema integrado de transporte, cuyos estudios iniciaremos con el Banco Interamericano de Desarrollo este año, para actualizar el Plan de Movilidad Integral Sustentable de la zona metropolitana.</p>
+                        <p>Ese plan contempla conectar mejor Berriozábal y Chiapa de Corzo a través de un corredor de transporte masivo por la avenida central, una propuesta que lleva más de diez años estudiando y que esperamos hacer realidad en este sexenio, o replicar con ejes similares en otras ciudades.</p>
+                    </div>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer" role="contentinfo">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sistema Cablebús</h4>
+                <p>Innovación en movilidad urbana para Chiapas</p>
+                <div class="footer-social">
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/SMyTChiapas" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Facebook" 
+                       class="social-link">
+                        <img src="facebook-icon.png" 
+                             alt="Facebook" 
+                             width="32" 
+                             height="32">
+                    </a>
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/smyt_chiapas/?igsh=MTdteHo3d2NlNmY3cA#" 
+                       target="_blank" 
+                       rel="noopener noreferrer"
+                       aria-label="Instagram" 
+                       class="social-link">
+                        <img src="instagram-icon.png" 
+                             alt="Instagram" 
+                             width="32" 
+                             height="32">
+                    </a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="preguntas.html">Preguntas Frecuentes</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto</h4>
+                <p><strong>Email:</strong> <a href="mailto:cablebus@chiapas.gob.mx">sdm.smyt@gmail.com</a></p>
+                <p><strong>Horario:</strong> Lun-Vie 8:00-17:00</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Gobierno de Chiapas - Secretaría de Movilidad y Transporte.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script-preguntas.js"></script>
+</body>
+</html>

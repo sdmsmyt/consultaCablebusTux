@@ -1,0 +1,946 @@
+/* ========================================
+   CSS BASE MEJORADO
+   Sistema Cablebús - Gobierno de Chiapas
+   ======================================== */
+
+/* ========================================
+   VARIABLES CSS (Custom Properties)
+   ======================================== */
+:root {
+    /* Colores primarios - Humanismo que Transforma */
+    --color-turquesa: #00A19A;
+    --color-turquesa-claro: #00B9B4;
+    --color-turquesa-oscuro: #008580;
+    --color-magenta: #E4007C;
+    --color-magenta-oscuro: #C0005E;
+    --color-naranja: #FF6B00;
+    --color-morado: #722B7C;
+    --color-blanco: #FFFFFF;
+    
+    /* Colores de soporte */
+    --color-gris-oscuro: #2c3e50;
+    --color-gris-medio: #6c757d;
+    --color-gris-claro: #e9ecef;
+    --color-gris-muy-claro: #f8f9fa;
+    
+    /* Tipografía */
+    --fuente-principal: 'Montserrat', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --fuente-secundaria: 'Open Sans', 'Segoe UI', sans-serif;
+    
+    /* Tamaños de fuente */
+    --texto-xs: 0.75rem;      /* 12px */
+    --texto-sm: 0.875rem;     /* 14px */
+    --texto-base: 1rem;       /* 16px */
+    --texto-lg: 1.125rem;     /* 18px */
+    --texto-xl: 1.25rem;      /* 20px */
+    --texto-2xl: 1.5rem;      /* 24px */
+    --texto-3xl: 1.875rem;    /* 30px */
+    --texto-4xl: 2.25rem;     /* 36px */
+    --texto-5xl: 3rem;        /* 48px */
+    
+    /* Espaciado */
+    --espaciado-xs: 0.25rem;  /* 4px */
+    --espaciado-sm: 0.5rem;   /* 8px */
+    --espaciado-md: 1rem;     /* 16px */
+    --espaciado-lg: 1.5rem;   /* 24px */
+    --espaciado-xl: 2rem;     /* 32px */
+    --espaciado-2xl: 3rem;    /* 48px */
+    --espaciado-3xl: 4rem;    /* 64px */
+    
+    /* Bordes */
+    --radio-sm: 0.375rem;     /* 6px */
+    --radio-md: 0.5rem;       /* 8px */
+    --radio-lg: 0.75rem;      /* 12px */
+    --radio-xl: 1rem;         /* 16px */
+    
+    /* Sombras */
+    --sombra-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    --sombra-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --sombra-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    --sombra-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    
+    /* Transiciones */
+    --transicion-rapida: 150ms ease;
+    --transicion-normal: 300ms ease;
+    --transicion-lenta: 500ms ease;
+    
+    /* Z-index */
+    --z-dropdown: 1000;
+    --z-sticky: 1020;
+    --z-fixed: 1030;
+    --z-modal-backdrop: 1040;
+    --z-modal: 1050;
+    --z-popover: 1060;
+    --z-tooltip: 1070;
+}
+
+/* ========================================
+   RESET Y ESTILOS BASE
+   ======================================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-secundaria);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+    color: var(--color-gris-oscuro);
+    background-color: var(--color-gris-muy-claro);
+    overflow-x: hidden;
+}
+
+/* ========================================
+   ACCESIBILIDAD
+   ======================================== */
+.skip-to-main {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    background: var(--color-turquesa);
+    color: var(--color-blanco);
+    padding: var(--espaciado-md) var(--espaciado-lg);
+    text-decoration: none;
+    font-weight: 600;
+    z-index: var(--z-tooltip);
+    transition: top var(--transicion-rapida);
+}
+
+.skip-to-main:focus {
+    top: 0;
+}
+
+/* Mejorar enfoque visible para accesibilidad */
+:focus-visible {
+    outline: 3px solid var(--color-turquesa);
+    outline-offset: 2px;
+}
+
+/* ========================================
+   TIPOGRAFÍA
+   ======================================== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fuente-principal);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: var(--espaciado-md);
+    color: var(--color-gris-oscuro);
+}
+
+h1 { font-size: var(--texto-4xl); }
+h2 { font-size: var(--texto-3xl); }
+h3 { font-size: var(--texto-2xl); }
+h4 { font-size: var(--texto-xl); }
+h5 { font-size: var(--texto-lg); }
+h6 { font-size: var(--texto-base); }
+
+p {
+    margin-bottom: var(--espaciado-md);
+}
+
+a {
+    color: var(--color-turquesa);
+    text-decoration: none;
+    transition: color var(--transicion-normal);
+}
+
+a:hover {
+    color: var(--color-turquesa-oscuro);
+}
+
+strong {
+    font-weight: 600;
+}
+
+/* ========================================
+   HEADER GUBERNAMENTAL
+   ======================================== */
+.gov-header {
+    background: linear-gradient(135deg, var(--color-turquesa) 0%, var(--color-turquesa-claro) 100%);
+    color: var(--color-blanco);
+    padding: var(--espaciado-sm) 0;
+    font-size: var(--texto-sm);
+    box-shadow: var(--sombra-md);
+    position: relative;
+    z-index: var(--z-sticky);
+}
+
+.gov-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-lg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gov-logo {
+    display: flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+    font-weight: 600;
+    color: var(--color-blanco);
+}
+
+.gov-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.gov-nav {
+    display: flex;
+    gap: var(--espaciado-lg);
+}
+
+.gov-nav a {
+    color: var(--color-blanco);
+    font-weight: 500;
+    transition: opacity var(--transicion-normal);
+    position: relative;
+}
+
+.gov-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--color-blanco);
+    transition: width var(--transicion-normal);
+}
+
+.gov-nav a:hover {
+    opacity: 0.9;
+}
+
+.gov-nav a:hover::after {
+    width: 100%;
+}
+
+
+/* ========================================
+   HEADER PRINCIPAL - SOLO IMAGEN (SIN OVERLAY)
+   ======================================== */
+.main-header {
+    /* === IMAGEN DE FONDO === */
+    position: relative;
+    background-image: url('images/cablebus-background.jpg');
+    background-size: cover;
+    background-position: center -350px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 280px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Overlay MUY SUTIL solo para mejorar legibilidad del texto (opcional) */
+.main-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);     /* Solo un oscurecimiento muy ligero */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Asegurar que el contenido esté sobre las capas de fondo */
+.header-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2.5rem 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    animation: fadeInUpHeader 0.8s ease-out;
+}
+
+/* Animación de entrada */
+@keyframes fadeInUpHeader {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === ESTILOS DEL LOGO === */
+.ministry-logos {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.logo-gobierno {
+    height: 85px;
+    width: auto;
+    filter: brightness(1.1) drop-shadow(0 3px 10px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.logo-gobierno:hover {
+    transform: scale(1.05);
+}
+
+/* === ESTILOS DEL TEXTO === */
+.header-text {
+    flex: 1;
+    color: white;
+}
+
+.header-text h1 {
+    font-family: var(--fuente-principal);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+}
+
+/* Texto con SOMBRAS MÁS FUERTES para que se lea bien sobre la imagen */
+.header-text h1,
+.header-text .subtitle,
+.header-text .slogan {
+    color: var(--color-blanco);
+    text-shadow: 
+        0 2px 4px rgba(0, 0, 0, 0.8),    /* Sombra muy fuerte */
+        0 4px 8px rgba(0, 0, 0, 0.6),    /* Sombra media */
+        0 0 30px rgba(0, 0, 0, 0.5),     /* Resplandor oscuro */
+        2px 2px 4px rgba(0, 0, 0, 0.9);  /* Definición */
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+    .main-header {
+        min-height: 220px;
+        background-attachment: scroll;
+        background-position: center center;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+    }
+    
+    .ministry-logos {
+        justify-content: center;
+    }
+    
+    .logo-gobierno {
+        height: 70px;
+    }
+    
+    .header-text h1 {
+        font-size: 1.5rem;
+    }
+    
+    .header-text .subtitle {
+        font-size: 1rem;
+    }
+    
+    .header-text .slogan {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .main-header {
+        min-height: 200px;
+        background-position: center center;
+    }
+    
+    .header-content {
+        padding: 1.5rem 1rem;
+    }
+    
+    .logo-gobierno {
+        height: 60px;
+    }
+    
+    .header-text h1 {
+        font-size: 1.3rem;
+    }
+}
+
+/* Efecto parallax solo en dispositivos que lo soporten */
+@media (prefers-reduced-motion: no-preference) and (min-width: 769px) {
+    .main-header {
+        background-attachment: fixed;
+    }
+}
+
+.subtitle {
+    color: var(--color-blanco);
+    font-size: var(--texto-lg);
+    font-weight: 600;
+    margin-bottom: var(--espaciado-xs);
+}
+
+.slogan {
+    color: var(--color-blanco);
+    font-size: var(--texto-base);
+    font-style: italic;
+    font-weight: 500;
+    opacity: 0.95;
+}
+
+/* ========================================
+   NAVEGACIÓN SECUNDARIA
+   ======================================== */
+.secondary-nav {
+    background: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-magenta-oscuro) 100%);
+    box-shadow: var(--sombra-md);
+    position: sticky;
+    top: 0;
+    z-index: var(--z-sticky);
+}
+
+.secondary-nav-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-lg);
+    display: flex;
+    gap: 0;
+}
+
+.secondary-nav a {
+    color: var(--color-blanco);
+    padding: var(--espaciado-md) var(--espaciado-xl);
+    transition: all var(--transicion-normal);
+    font-weight: 600;
+    font-family: var(--fuente-principal);
+    position: relative;
+    border-bottom: 3px solid transparent;
+}
+
+.secondary-nav a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    transition: width var(--transicion-normal);
+    z-index: -1;
+}
+
+.secondary-nav a:hover::before {
+    width: 100%;
+}
+
+.secondary-nav a:hover {
+    border-bottom-color: var(--color-blanco);
+}
+
+.secondary-nav a.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-bottom-color: var(--color-blanco);
+}
+
+/* ========================================
+   CONTAINER PRINCIPAL
+   ======================================== */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaciado-3xl) var(--espaciado-lg);
+}
+
+/* ========================================
+   BOTONES
+   ======================================== */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--espaciado-sm);
+    padding: var(--espaciado-md) var(--espaciado-xl);
+    border-radius: var(--radio-md);
+    font-family: var(--fuente-principal);
+    font-weight: 600;
+    font-size: var(--texto-base);
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all var(--transicion-normal);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width var(--transicion-lenta), height var(--transicion-lenta);
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.btn svg {
+    position: relative;
+    z-index: 1;
+    transition: transform var(--transicion-normal);
+}
+
+.btn:hover svg {
+    transform: translateX(4px);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--color-turquesa) 0%, var(--color-turquesa-claro) 100%);
+    color: var(--color-blanco);
+    box-shadow: 0 4px 15px rgba(0, 161, 154, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 161, 154, 0.4);
+}
+
+.btn-secondary {
+    background: linear-gradient(135deg, var(--color-magenta) 0%, var(--color-magenta-oscuro) 100%);
+    color: var(--color-blanco);
+    box-shadow: 0 4px 15px rgba(228, 0, 124, 0.3);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(228, 0, 124, 0.4);
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--color-turquesa);
+    border: 2px solid var(--color-turquesa);
+}
+
+.btn-outline:hover {
+    background: var(--color-turquesa);
+    color: var(--color-blanco);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   SECCIÓN DE CONTACTO
+   ======================================== */
+.contact-section {
+    background: var(--color-blanco);
+    padding: var(--espaciado-3xl) var(--espaciado-2xl);
+    border-radius: var(--radio-xl);
+    margin-bottom: var(--espaciado-3xl);
+    box-shadow: var(--sombra-lg);
+    border-top: 4px solid var(--color-turquesa);
+}
+
+.contact-title {
+    color: var(--color-turquesa);
+    font-size: var(--texto-3xl);
+    text-align: center;
+    margin-bottom: var(--espaciado-md);
+    font-weight: 800;
+}
+
+.contact-subtitle {
+    color: var(--color-gris-medio);
+    text-align: center;
+    margin-bottom: var(--espaciado-2xl);
+    font-size: var(--texto-lg);
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--espaciado-xl);
+}
+
+.contact-item {
+    background: linear-gradient(135deg, var(--color-gris-muy-claro) 0%, var(--color-blanco) 100%);
+    padding: var(--espaciado-xl);
+    border-radius: var(--radio-lg);
+    display: flex;
+    align-items: flex-start;
+    gap: var(--espaciado-lg);
+    border-left: 4px solid var(--color-magenta);
+    box-shadow: var(--sombra-sm);
+    transition: all var(--transicion-normal);
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-lg);
+    border-left-color: var(--color-turquesa);
+}
+
+.contact-icon {
+    flex-shrink: 0;
+    color: var(--color-turquesa);
+    font-size: 2rem;
+}
+
+.contact-icon svg {
+    width: 32px;
+    height: 32px;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-label {
+    color: var(--color-morado);
+    font-weight: 600;
+    font-size: var(--texto-sm);
+    margin-bottom: var(--espaciado-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-family: var(--fuente-principal);
+}
+
+.contact-value {
+    color: var(--color-gris-oscuro);
+    font-size: var(--texto-base);
+    line-height: 1.6;
+}
+
+.contact-value a {
+    color: var(--color-turquesa);
+    font-weight: 600;
+    transition: color var(--transicion-normal);
+}
+
+.contact-value a:hover {
+    color: var(--color-magenta);
+}
+
+/* ========================================
+   FOOTER
+   ======================================== */
+.site-footer {
+    background: linear-gradient(135deg, #2c3e50 0%, #1a252f 100%);
+    color: var(--color-blanco);
+    padding: var(--espaciado-3xl) 0 var(--espaciado-lg);
+    margin-top: var(--espaciado-3xl);
+    position: relative;
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, 
+        var(--color-turquesa) 0%, 
+        var(--color-magenta) 33%, 
+        var(--color-naranja) 66%, 
+        var(--color-morado) 100%);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--espaciado-lg);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--espaciado-2xl);
+    margin-bottom: var(--espaciado-2xl);
+}
+
+.footer-section h4 {
+    color: var(--color-turquesa-claro);
+    margin-bottom: var(--espaciado-lg);
+    font-size: var(--texto-xl);
+    font-weight: 700;
+}
+
+.footer-section p {
+    color: var(--color-gris-claro);
+    line-height: 1.8;
+    margin-bottom: var(--espaciado-md);
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: var(--espaciado-sm);
+}
+
+.footer-section a {
+    color: var(--color-gris-claro);
+    transition: color var(--transicion-normal);
+    display: inline-block;
+}
+
+.footer-section a:hover {
+    color: var(--color-turquesa-claro);
+    transform: translateX(4px);
+}
+
+.footer-social {
+    display: flex;
+    gap: var(--espaciado-md);
+    margin-top: var(--espaciado-lg);
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blanco);
+    transition: all var(--transicion-normal);
+}
+
+.social-link:hover {
+    background: var(--color-turquesa);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--espaciado-lg);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-gris-claro);
+    font-size: var(--texto-sm);
+}
+
+/* ========================================
+   TARJETAS GENÉRICAS
+   ======================================== */
+.card {
+    background: var(--color-blanco);
+    border-radius: var(--radio-lg);
+    padding: var(--espaciado-xl);
+    box-shadow: var(--sombra-md);
+    border-left: 4px solid var(--color-turquesa);
+    transition: all var(--transicion-normal);
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-xl);
+}
+
+.card-title {
+    color: var(--color-turquesa);
+    font-size: var(--texto-xl);
+    margin-bottom: var(--espaciado-md);
+    font-weight: 700;
+}
+
+.card-content {
+    color: var(--color-gris-oscuro);
+    line-height: 1.6;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    :root {
+        --texto-4xl: 1.875rem;  /* 30px */
+        --texto-3xl: 1.5rem;    /* 24px */
+        --texto-2xl: 1.25rem;   /* 20px */
+    }
+    
+    .gov-header-content {
+        flex-direction: column;
+        gap: var(--espaciado-sm);
+        text-align: center;
+    }
+    
+    .gov-nav {
+        flex-direction: column;
+        gap: var(--espaciado-xs);
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 0 var(--espaciado-lg);
+    }
+    
+    .secondary-nav-content {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .secondary-nav a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--espaciado-xl);
+    }
+    
+    .container {
+        padding: var(--espaciado-xl) var(--espaciado-lg);
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: var(--espaciado-xl) var(--espaciado-lg);
+    }
+    
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* ========================================
+   UTILIDADES
+   ======================================== */
+.text-turquoise { color: var(--color-turquesa) !important; }
+.text-magenta { color: var(--color-magenta) !important; }
+.text-orange { color: var(--color-naranja) !important; }
+.text-purple { color: var(--color-morado) !important; }
+.text-white { color: var(--color-blanco) !important; }
+
+.bg-turquoise { background-color: var(--color-turquesa) !important; }
+.bg-magenta { background-color: var(--color-magenta) !important; }
+.bg-orange { background-color: var(--color-naranja) !important; }
+.bg-purple { background-color: var(--color-morado) !important; }
+
+/* ========================================
+   ANIMACIONES
+   ======================================== */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+.slide-in-up {
+    animation: slideInUp 0.6s ease-out;
+}
+
+.slide-in-down {
+    animation: slideInDown 0.6s ease-out;
+}
+
+/* ========================================
+   MODO DE ALTO CONTRASTE (Accesibilidad)
+   ======================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-turquesa: #008C86;
+        --color-magenta: #D0006E;
+    }
+}
+
+/* ========================================
+   PREFERENCIA DE MOVIMIENTO REDUCIDO
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ========================================
+   IMPRESIÓN
+   ======================================== */
+@media print {
+    .gov-header,
+    .secondary-nav,
+    .site-footer,
+    .btn {
+        display: none;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+}
+
+.footer-social .social-link img {
+    display: block;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.footer-social .social-link:hover img {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
